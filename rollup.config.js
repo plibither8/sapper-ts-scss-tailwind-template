@@ -22,7 +22,12 @@ const onwarn = (warning, onwarn) =>
   warning.code === 'THIS_IS_UNDEFINED' ||
   onwarn(warning);
 
-const preprocess = autoProcess({ postcss: true, sourceMap: dev });
+const preprocess = autoProcess({
+  postcss: true,
+  scss: true,
+  sourceMap: dev
+});
+
 export default {
   client: {
     input: config.client.input().replace(/\.js$/, '.ts'),

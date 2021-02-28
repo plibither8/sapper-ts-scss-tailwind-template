@@ -1,15 +1,10 @@
 const tailwind = require('tailwindcss');
 const cssnano = require('cssnano');
-const postcssImport = require('postcss-import');
-const presetEnv = require('postcss-preset-env')({
-  features: {
-    'nesting-rules': true,
-  },
-});
+const autoprefixer = require('autoprefixer');
 
 const plugins =
   process.env.NODE_ENV === 'production'
-    ? [postcssImport, tailwind, presetEnv, cssnano]
-    : [postcssImport, tailwind, presetEnv];
+    ? [tailwind, autoprefixer, cssnano]
+    : [tailwind];
 
 module.exports = { plugins };

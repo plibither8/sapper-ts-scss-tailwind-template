@@ -1,33 +1,70 @@
 <!DOCTYPE html>
+
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-    <meta name="theme-color" content="#333333" />
 
-    %sapper.base%
+<head>
+  <title>__TITLE</title>
 
-    <link rel="stylesheet" href="global.css" />
-    <link rel="manifest" href="manifest.json" crossorigin="use-credentials" />
-    <link rel="icon" type="image/png" href="favicon.png" />
+  <!-- Primary meta tags -->
+  <meta name="title" content="__TITLE">
+  <meta name="description" content="__DESCRIPTION">
+  <meta name="keywords" content="__KEYWORDS">
+  <meta name="author" content="__AUTHOR">
+  <meta name="robots" content="index, follow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="language" content="English">
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
-    <!-- Sapper creates a <script> tag containing `src/client.js`
-	     and anything else it needs to hydrate the app and
-	     initialise the router -->
-    %sapper.scripts%
+  <!-- Open Graph / Facebook-->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="__URL">
+  <meta property="og:title" content="__TITLE">
+  <meta property="og:description" content="__DESCRIPTION">
+  <meta property="og:image" content="__IMAGE">
 
-    <!-- Sapper generates a <style> tag containing critical CSS
-	     for the current page. CSS for the rest of the app is
-	     lazily loaded when it precaches secondary pages -->
-    %sapper.styles%
+  <!-- Twitter-->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="__URL">
+  <meta property="twitter:title" content="__TITLE">
+  <meta property="twitter:description" content="__DESCRIPTION">
+  <meta property="twitter:image" content="__IMAGE">
 
-    <!-- This contains the contents of the <svelte:head> component, if
-	     the current page has one -->
-    %sapper.head%
-  </head>
-  <body>
-    <!-- The application will be rendered inside this element,
-	     because `src/client.js` references it -->
-    <div id="sapper">%sapper.html%</div>
-  </body>
+  <!-- Miscellaneous tags-->
+  <link rel="me" href="">
+  <link rel="me" href="" type="text/html">
+
+  %sapper.base%
+
+  <!-- Theming and icons-->
+  <!-- Use https://realfavicongenerator.net/
+    and place content in /static/meta directory -->
+  <!--
+  <link rel="apple-touch-icon" sizes="180x180" href="/meta/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/meta/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/meta/favicon-16x16.png">
+  <link rel="manifest" href="/meta/manifest.json">
+  <link rel="mask-icon" href="/meta/safari-pinned-tab.svg" color="#461f26">
+  <link rel="shortcut icon" href="/meta/favicon.ico">
+  <meta name="msapplication-TileColor" content="#061125">
+  <meta name="msapplication-config" content="/meta/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
+  -->
+
+  <!-- Styles-->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;400;700;900&display=swap">
+  %sapper.styles%
+
+  <!-- Sapper scripts -->
+  %sapper.scripts%
+
+  <!-- Rest of the Sapper head elements -->
+  %sapper.head%
+</head>
+
+<body>
+  <!-- Main Sapper html -->
+  %sapper.html%
+</body>
+
 </html>
